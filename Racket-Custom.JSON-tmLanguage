@@ -1,0 +1,190 @@
+{
+    "name": "Racket (Custom)",
+    "foldingStopMarker": "\\)", 
+    "foldingStartMarker": "\\(", 
+    "scopeName": "source.racket",
+    "fileTypes": ["rkt"],
+    "patterns": [
+        // {
+        //     "name": "string.quoted.double.source.racket",
+        //     "begin": "\"",
+        //     "end": "\""
+        // },
+        // {
+        //     "name": "meta.variable.source.racket",
+        //     "match": "\\((define)\\s+([a-zA-Z0-9_\\-?\\+^]+)\\s*",
+        //     "captures": {
+        //         "1": {
+        //             "name": "keyword.source.racket"
+        //         },
+        //         "2": {
+        //             "name": "entity.name.variable.source.racket"
+        //         }
+        //     }
+        // },
+        // {
+        //     "name": "meta.variable.source.racket",
+        //     "match": "\\((define)\\s+([a-zA-Z0-9_\\-?\\+^]+)\\s*",
+        //     "captures": {
+        //         "1": {
+        //             "name": "keyword.source.racket"
+        //         },
+        //         "2": {
+        //             "name": "entity.name.variable.source.racket"
+        //         }
+        //     }
+        // },
+        // {
+        //     "name": "meta.keywords.source.racket",
+        //     "match": "\\b(if|lambda|cond|define|type-case|let|letrec|let!|\\#lang|require|provide|test|else|first|rest|define-type|define-type-alias|define-struct|not|local|error)[\\s\\)]",
+        //     "captures": {
+        //         "1": {
+        //             "name": "keyword.source.racket"
+        //         }
+        //     }
+        // },
+        // {
+        //     "name": "constant.language.source.racket",
+        //     "match": "\\b(true|false|empty|cons)[\\s\\)]"
+        // },
+        // {
+        //     "name": "constant.numeric.integer.source.racket",
+        //     "match": "\\b(0|([1-9][0-9_]*))\\b"
+        // },
+        // {
+        //     "name": "comment.line.documentation.source.racket",
+        //     "begin": ";",
+        //     "end": "$\\n"
+        // },
+        // comment blocks
+        {
+            "name": "comment.block.source.racket",
+            "begin": "#\\|",
+            "end": "\\|#"
+        },
+        // ; comments
+        {
+            "name": "comment.line.documentation.source.racket", 
+            "captures": {
+                "1": {
+                    "name": "punctuation.definition.comment.source.racket"
+                }
+            }, 
+            "match": "(;).*$\\n?"
+        },
+        // #! comment lines
+        {
+            "name": "comment.line.source.racket", 
+            "captures": {
+                "1": {
+                    "name": "punctuation.definition.comment.source.racket"
+                }
+            }, 
+            "match": "(#!).*$\\n?"
+        },
+        // # lang definition
+        {
+            "name": "constant.character.source.racket",
+            "match": "^(#).*$\\n?"
+        },
+        {
+            "name": "meta.function.source.racket", 
+            "captures": {
+                "5": {
+                    "name": "meta.function.source.racket"
+                }, 
+                "4": {
+                    "name": "entity.name.function.source.racket"
+                }, 
+                "2": {
+                    "name": "storage.type.function-type.source.racket"
+                }
+            }, 
+            "match": "(\\b(?i:(defun|define|defmethod|defmacro))\\b)(\\s+)\\((((\\w|\\-|\\!|\\?)*) ?((\\w|\\-|\\!|\\?) ?)*)"
+        },
+        // enter source.racket
+        {
+            "name": "meta.function.source.racket", 
+            "captures": {
+                "4": {
+                    "name": "entity.name.function.source.racket"
+                }, 
+                "2": {
+                    "name": "storage.type.function-type.source.racket"
+                }
+            }, 
+            "match": "(\\b(?i:(defun|define|defmethod|defmacro))\\b)(\\s+)((\\w|\\-|\\!|\\?)*)"
+        }, 
+        {
+            "name": "constant.character.source.racket", 
+            "captures": {
+                "1": {
+                    "name": "punctuation.definition.constant.source.racket"
+                }
+            }, 
+            "match": "(#)(\\w|[\\\\+-=<>'\"&#])+"
+        }, 
+        {
+            "name": "variable.other.global.source.racket", 
+            "captures": {
+                "3": {
+                    "name": "punctuation.definition.variable.source.racket"
+                }, 
+                "1": {
+                    "name": "punctuation.definition.variable.source.racket"
+                }
+            }, 
+            "match": "(\\*)(\\S*)(\\*)"
+        }, 
+        {
+            "name": "keyword.control.source.racket", 
+            "match": "\\b(?i:case|do|let|loop|if|else|when)\\b"
+        }, 
+        {
+            "name": "keyword.operator.source.racket", 
+            "match": "\\b(?i:eq|neq|and|or)\\b"
+        }, 
+        // {
+        //     "name": "keyword.operator.source.racket", 
+        //     "match": "\\*|\\/|\\-|\\+|=|<|>"
+        // }, 
+        {
+            "name": "keyword.operator.source.racket", 
+            "match": "(\\*|\\/|\\-|\\+|=|<|>)"
+        }, 
+        {
+            "name": "constant.language.source.racket", 
+            "match": "\\b(?i:null|nil)\\b"
+        }, 
+        {
+            "name": "support.function.source.racket", 
+            "match": "\\b(?i:cons|car|cdr|cond|define|lambda|format|setq|setf|quote|eval|append|list|listp|memberp|t|load|progn)\\b"
+        }, 
+        {
+            "name": "constant.numeric.source.racket", 
+            "match": "\\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)(L|l|UL|ul|u|U|F|f|ll|LL|ull|ULL)?\\b"
+        }, 
+        {
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.definition.string.begin.source.racket"
+                }
+            }, 
+            "name": "string.quoted.double.source.racket", 
+            "patterns": [
+                {
+                    "name": "constant.character.escape.source.racket", 
+                    "match": "\\\\."
+                }
+            ], 
+            "begin": "\"", 
+            "endCaptures": {
+                "0": {
+                    "name": "punctuation.definition.string.end.source.racket"
+                }
+            }, 
+            "end": "\""
+        }
+    ], 
+    "uuid": "afda310a-1b2e-4b97-a0f7-13819a0ee21f"
+}

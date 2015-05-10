@@ -1,0 +1,163 @@
+{
+    "name": "Calydon plain", 
+    "uuid": "D144862E-4881-4C4F-B56C-8B5324BE5B67", 
+    "settings": [
+        {
+            "settings": {
+                "foreground": "#CDCDCD", 
+                "lineHighlight": "#00000012", 
+                "bracketsOptions": "foreground", 
+                "background": "#1E1E1E", 
+                "bracketContentsForeground": "#FFF700", 
+                "bracketContentsOptions": "foreground", 
+                "invisibles": "#BFBFBF0F", 
+                "selection": "#4A4A4A", 
+                "bracketsForeground": "#14A6F5", 
+                "caret": "#4991F3"
+            }
+        }, 
+        {
+            "name": "Comment", 
+            "scope": "comment", 
+            "settings": {
+                "fontStyle": "italic", 
+                "foreground": "#6D6D6D"
+            }
+        }, 
+        {
+            "name": "String", 
+            "scope": "string", 
+            "settings": {
+                "foreground": "#A8CD3A"
+            }
+        }, 
+        {
+            "name": "Number", 
+            "scope": "constant.numeric", 
+            "settings": {
+                "foreground": "#0DAAFF"
+            }
+        }, 
+        {
+            "name": "Operators", 
+            "scope": "keyword.operator", 
+            "settings": {
+                "foreground": "#F51462"
+            }
+        }, 
+        {
+            "name": "Built-in constant", 
+            "scope": "constant.language", 
+            "settings": {
+                "foreground": "#C332CD"
+            }
+        }, 
+        {
+            "name": "User-defined constant", 
+            "scope": "constant.character, constant.other", 
+            "settings": {
+                "foreground": "#41812F"
+            }
+        }, 
+        {
+            "name": "Variable", 
+            "scope": "variable.language, variable.other", 
+            "settings": {
+                "foreground": "#57B646"
+            }
+        }, 
+        {
+            "name": "Keyword", 
+            "scope": "keyword", 
+            "settings": {
+                "fontStyle": "", 
+                "foreground": "#5874CD"
+            }
+        }, 
+        {
+            "name": "Storage", 
+            "scope": "storage", 
+            "settings": {
+                "foreground": "#1BA6C4"
+            }
+        }, 
+        {
+            "name": "Class name", 
+            "scope": "entity.name.class", 
+            "settings": {
+                "foreground": "#3A8CCD"
+            }
+        }, 
+        {
+            "name": "Inherited class", 
+            "scope": "entity.other.inherited-class", 
+            "settings": {
+                "foreground": "#74CFEF"
+            }
+        }, 
+        {
+            "name": "Function name", 
+            "scope": "entity.name.function", 
+            "settings": {
+                "foreground": "#CD4E55"
+            }
+        }, 
+        {
+            "name": "Function argument", 
+            "scope": "variable.parameter", 
+            "settings": {
+                "foreground": "#58CD4D"
+            }
+        }, 
+        {
+            "name": "Tag name", 
+            "scope": "entity.name.tag", 
+            "settings": {
+                "foreground": "#CD4422"
+            }
+        }, 
+        {
+            "name": "Tag attribute", 
+            "scope": "entity.other.attribute-name", 
+            "settings": {
+                "foreground": "#CD6450"
+            }
+        }, 
+        {
+            "name": "Library function", 
+            "scope": "support.function", 
+            "settings": {
+                "foreground": "#FFC038"
+            }
+        }, 
+        {
+            "name": "Library constant", 
+            "scope": "support.constant", 
+            "settings": {
+                "foreground": "#CD8DB4"
+            }
+        }, 
+        {
+            "name": "Library class/type", 
+            "scope": "support.type, support.class", 
+            "settings": {
+                "foreground": "#917CCD"
+            }
+        }, 
+        {
+            "name": "Library variable", 
+            "scope": "support.other.variable", 
+            "settings": {
+                "foreground": "#879ACD"
+            }
+        }, 
+        {
+            "name": "Invalid", 
+            "scope": "invalid", 
+            "settings": {
+                "foreground": "#3C0100", 
+                "background": "#CD3228"
+            }
+        }
+    ]
+}
